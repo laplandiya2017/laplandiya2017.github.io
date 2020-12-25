@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+.switch{
+    display: none;
+}
+.conteiner {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+.switch-for{
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+}
+.switch-for::after {
+    content: "";
+    width: 250px;
+    height: 125px;
+    background-color: rgb(151, 230, 144);
+    border-radius: 75px;
+    
+    box-shadow: inset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%)
+}
+.switch-for::before {
+    content: "";
+    width: 110px;
+    height: 110px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    top: -55px;
+    left: -116px;
+    z-index: 1;
+    transition: .4s;
+}
+.switch:checked + .switch-for::before{
+    left: 6px;
+}
+.switch:checked + .switch-for::after {
+    background-color: rgb(230, 173, 173);
+}
+.switch-for::after:hover  .conteiner{
+    background-color: aliceblue;
+}
