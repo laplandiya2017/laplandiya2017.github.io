@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 @keyframes svganimation {
   0%{
       stroke-dashoffset: 0;
@@ -9,31 +10,40 @@
       stroke-dashoffset: 0;
   }
 }
-
-html{
-height: 100%;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 body, html{
-  background: #ff6038;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
 }
-
-.card{
-  border-radius: 20%;
-  background-color: #3dce04;
+h1{
+  font-family: 'Marck Script', cursive;
+  font-size: 3rem;
+  color: #29304A;
+}
+.conteiner {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/3141.jpg);
+  background-size: cover;
+}
+.card{
+  margin-top: 100px;
   position: relative;
+  left: 25%;
+  top: -50px;
+  z-index: 1;
 }
 
 .card svg {
   /* fill: none; */
   stroke-width: 2px;
-  stroke: rgb(235, 220, 15);
+  stroke: #29304A;
   width: 100%;
   height: 100%; 
 }
@@ -48,7 +58,7 @@ body, html{
   top: 2%;
   left: 45%;
   transform: translate(-50%, -50%);
-  color: rgb(255, 233, 30);
+  color: #29304A;
 }
 .fa-candy-cane {
   font-size: 2em;
